@@ -24,6 +24,13 @@ beforeEach(() => {
 
     });
 
+    it.only('Deve completar o pré-cadastro com sucesso - Usando  comandos customizados', () => {
+        var emailfaker2 = faker.internet.email()
+
+        cy.PreCadastro(emailfaker2, 'senha@senha', 'Kalleozin', 'Teste')
+        cy.get('.woocommerce-message').should('contain', 'Detalhes da conta modificados com sucesso.')
+    })
+
 
 
 
