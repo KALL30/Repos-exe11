@@ -12,7 +12,8 @@ describe('Funcionalidade endereços - Faturamento e Entrega', () => {
     }); 
 
     it('Deve fazer cadastro de faturamento com sucesso', () => {
-        EnderecoPage.editarEnderecoFaturamento()
+        EnderecoPage.editarEnderecoFaturamento('kallebs', 'apelão', 'epicgames', 'Brasil', 'rua gutembbear, bloco06 apt33', 'Recife, Pernambuco', '(51111111)', '8199999999')
+        cy.get('.woocommerce-message').should('contain', ('Endereço altera'))
      });
 });
 
