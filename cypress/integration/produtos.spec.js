@@ -29,9 +29,7 @@ describe('Funcionalidade pagina de produtos', () => {
 
     });
 
-    it.only('Deve adicionar produtos ao carrinho - Usando comando custumizados', () => {
+    it('Deve adicionar produtos ao carrinho - Usando comando custumizados', () => {
         cy.addProdutos('.button-variable-item-32', 3)
-        
-
     });
 })
