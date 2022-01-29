@@ -24,8 +24,20 @@ class EnderecoPage {
     }
 
 
-    editarEnderecoEntrega() {
-        //elementos + ações
+    editarEnderecoEntrega(nome2, sobrenome2, empresa2, pais2, endereco2, complemento2, cidade2, estado2, cep2,) {
+        cy.get('.woocommerce-MyAccount-navigation-link--edit-address > a').click()
+        cy.get(':nth-child(2) > .title > .edit').click()
+       
+        cy.get('#shipping_first_name').clear().type(nome2)
+        cy.get('#shipping_last_name').clear().type(sobrenome2)
+        cy.get('#shipping_company').clear().type(empresa2)
+        cy.get('#select2-shipping_country-container').type(pais2).get('[aria-selected="true"]').click()
+        cy.get('#shipping_address_1').clear().type(endereco2)
+        cy.get('#shipping_address_2').clear().type(complemento2)
+        cy.get('#shipping_city').clear().type(cidade2)
+
+
+
     }
 
 }
